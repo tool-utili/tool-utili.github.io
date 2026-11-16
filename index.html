@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -14,50 +14,41 @@
             --muted: #9ca3af;
             --border: #1f2937;
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
-
         body {
             background-color: var(--bg);
             color: var(--text);
             min-height: 100vh;
             padding: 24px 16px;
         }
-
         .wrapper {
             max-width: 800px;
             margin: 0 auto;
         }
-
         header {
             text-align: center;
             margin-bottom: 28px;
         }
-
         h1 {
             font-size: 2rem;
             letter-spacing: -0.5px;
             margin-bottom: 8px;
         }
-
-            h1 span {
-                color: var(--accent);
-            }
-
+        h1 span {
+            color: var(--accent);
+        }
         header p {
             color: var(--muted);
             font-size: 0.95rem;
         }
-
         .search-box {
             margin-bottom: 20px;
         }
-
         input[type="text"] {
             width: 100%;
             padding: 14px 18px;
@@ -69,11 +60,9 @@
             outline: none;
             transition: border-color 0.2s;
         }
-
-            input[type="text"]:focus {
-                border-color: var(--accent);
-            }
-
+        input[type="text"]:focus {
+            border-color: var(--accent);
+        }
         .filters {
             display: flex;
             gap: 8px;
@@ -81,7 +70,6 @@
             justify-content: center;
             margin-bottom: 24px;
         }
-
         .filter-btn {
             background-color: var(--card);
             border: 1px solid var(--border);
@@ -92,19 +80,16 @@
             cursor: pointer;
             transition: all 0.2s;
         }
-
-            .filter-btn.active, .filter-btn:hover {
-                background-color: var(--accent);
-                color: #fff;
-                border-color: var(--accent);
-            }
-
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 16px;
         }
-
         .tool-card {
             background-color: var(--card);
             border: 1px solid var(--border);
@@ -117,13 +102,11 @@
             justify-content: space-between;
             transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
         }
-
-            .tool-card:hover {
-                transform: translateY(-3px);
-                background-color: var(--card-hover);
-                border-color: var(--accent);
-            }
-
+        .tool-card:hover {
+            transform: translateY(-3px);
+            background-color: var(--card-hover);
+            border-color: var(--accent);
+        }
         .tag {
             display: inline-block;
             font-size: 0.7rem;
@@ -136,19 +119,16 @@
             margin-bottom: 10px;
             width: fit-content;
         }
-
         .tool-title {
             font-size: 1.15rem;
             font-weight: 700;
             margin-bottom: 6px;
         }
-
         .tool-desc {
             font-size: 0.85rem;
             color: var(--muted);
             line-height: 1.4;
         }
-
         footer {
             text-align: center;
             margin-top: 40px;
@@ -159,51 +139,58 @@
 </head>
 <body>
 
-    <div class="wrapper">
-        <header>
-            <h1>🛠️ <span>tool-utili</span></h1>
-            <p>Strumenti gratuiti, veloci e senza pubblicità invasiva</p>
-        </header>
+<div class="wrapper">
+    <header>
+        <h1>🛠️ <span>tool-utili</span></h1>
+        <p>Strumenti gratuiti, veloci e senza pubblicità invasiva</p>
+    </header>
 
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Cerca uno strumento (es. poker, mira, media...)" onkeyup="filterTools()">
-        </div>
-
-        <div class="filters">
-            <button class="filter-btn active" onclick="setCategory('all', this)">Tutti</button>
-            <button class="filter-btn" onclick="setCategory('gaming', this)">Gaming</button>
-            <button class="filter-btn" onclick="setCategory('carte', this)">Poker & Giochi</button>
-            <button class="filter-btn" onclick="setCategory('studio', this)">Scuola & Utility</button>
-        </div>
-
-        <div class="grid" id="toolsGrid">
-            <!-- TOOL 1 -->
-            <a href="https://tool-utili.github.io/mira-conversione/" class="tool-card" data-category="gaming">
-                <div>
-                    <span class="tag">Gaming</span>
-                    <div class="tool-title">🎯 Aim & DPI Converter</div>
-                    <div class="tool-desc">Converti la tua sensibilità del mouse e i DPI tra diversi giochi FPS senza perdere memoria muscolare.</div>
-                </div>
-            </a>
-
-            <!-- TOOL 2 -->
-            <a href="https://tool-utili.github.io/poker-odds/" class="tool-card" data-category="carte">
-                <div>
-                    <span class="tag">Poker & Giochi</span>
-                    <div class="tool-title">♠️ Poker Odds & +EV</div>
-                    <div class="tool-desc">Calcola istantaneamente outs, probabilità al Flop/Turn e scopri se chiamare è matematicamente profittevole.</div>
-                </div>
-            </a>
-
-            <!-- AGGIUNGI I PROSSIMI TOOL QUI SOTTO COPIANDO UNO DEI BLOCCHI SOPRA -->
-        </div>
-
-        <footer>
-            © 2026 tool-utili • Nuovi strumenti aggiunti ogni settimana
-        </footer>
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Cerca uno strumento (es. poker, mira, media...)" onkeyup="filterTools()">
     </div>
 
-    <script>
+    <div class="filters">
+        <button class="filter-btn active" onclick="setCategory('all', this)">Tutti</button>
+        <button class="filter-btn" onclick="setCategory('gaming', this)">Gaming</button>
+        <button class="filter-btn" onclick="setCategory('carte', this)">Poker & Giochi</button>
+        <button class="filter-btn" onclick="setCategory('studio', this)">Scuola & Utility</button>
+    </div>
+
+    <div class="grid" id="toolsGrid">
+        <!-- TOOL 1 -->
+        <a href="https://tool-utili.github.io/mira-conversione/" class="tool-card" data-category="gaming">
+            <div>
+                <span class="tag">Gaming</span>
+                <div class="tool-title">🎯 Aim & DPI Converter</div>
+                <div class="tool-desc">Converti la tua sensibilità del mouse e i DPI tra diversi giochi FPS senza perdere memoria muscolare.</div>
+            </div>
+        </a>
+
+        <!-- TOOL 2 -->
+        <a href="https://tool-utili.github.io/poker-odds/" class="tool-card" data-category="carte">
+            <div>
+                <span class="tag">Poker & Giochi</span>
+                <div class="tool-title">♠️ Poker Odds & +EV</div>
+                <div class="tool-desc">Calcola istantaneamente outs, probabilità al Flop/Turn e scopri se chiamare è matematicamente profittevole.</div>
+            </div>
+        </a>
+
+        <!-- TOOL 3 -->
+        <a href="https://tool-utili.github.io/media-voti/" class="tool-card" data-category="studio">
+            <div>
+                <span class="tag">Scuola & Utility</span>
+                <div class="tool-title">📚 Calcolatore Media Voti</div>
+                <div class="tool-desc">Calcola la tua media scolastica al volo e scopri che voto ti serve per arrivare al 6.</div>
+            </div>
+        </a>
+    </div>
+
+    <footer>
+        © 2026 tool-utili • Nuovi strumenti aggiunti ogni settimana
+    </footer>
+</div>
+
+<script>
     let currentCategory = 'all';
 
     function setCategory(cat, btn) {
@@ -228,7 +215,7 @@
             card.style.display = (matchesSearch && matchesCat) ? 'flex' : 'none';
         });
     }
-    </script>
+</script>
 
 </body>
 </html>
