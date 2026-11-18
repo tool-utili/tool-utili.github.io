@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tool Utili - Calcolatori e Utility Gratis</title>
+    <title>FantaHub • Strumenti per il Fantacalcio</title>
     <style>
         * {
             box-sizing: border-box;
@@ -19,17 +19,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 20px;
+            justify-content: center;
+            padding: 20px;
         }
 
         .header {
             text-align: center;
-            max-width: 600px;
-            margin-bottom: 36px;
+            max-width: 500px;
+            margin-bottom: 30px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 800;
             margin-bottom: 8px;
         }
@@ -45,7 +46,7 @@
 
         .grid {
             width: 100%;
-            max-width: 600px;
+            max-width: 500px;
             display: flex;
             flex-direction: column;
             gap: 16px;
@@ -57,8 +58,8 @@
             justify-content: space-between;
             background-color: #1e293b;
             border: 1px solid #334155;
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 14px;
+            padding: 22px;
             text-decoration: none;
             color: #f8fafc;
             transition: transform 0.15s ease, border-color 0.2s ease;
@@ -67,11 +68,6 @@
         .card:hover {
             transform: translateY(-2px);
             border-color: #38bdf8;
-        }
-
-        .card.featured {
-            border-color: #38bdf8;
-            background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
         }
 
         .card-content {
@@ -91,7 +87,7 @@
         }
 
         .card-title {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             font-weight: 700;
             margin-bottom: 4px;
             color: #f8fafc;
@@ -104,16 +100,15 @@
         }
 
         .card-arrow {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: #38bdf8;
             font-weight: 700;
         }
 
         footer {
-            margin-top: auto;
-            padding-top: 40px;
+            margin-top: 40px;
             font-size: 0.8rem;
-            color: #94a3b8;
+            color: #64748b;
             text-align: center;
         }
     </style>
@@ -121,47 +116,34 @@
 <body>
 
     <div class="header">
-        <h1>Tool <span>Utili</span></h1>
-        <p class="subtitle">Strumenti veloci, gratuiti e senza pubblicità invadenti.</p>
+        <h1>Fanta<span>Hub</span></h1>
+        <p class="subtitle">Gli unici strumenti di cui hai bisogno per svoltare la tua lega.</p>
     </div>
 
     <div class="grid">
-        <a href="https://tool-utili.github.io/modificatore-difesa/" class="card featured">
+        <!-- TOOL 1: Modificatore Difesa (Punta al suo repository o cartella dedicata) -->
+        <a href="/modificatore-difesa/" class="card">
             <div class="card-content">
-                <span class="badge">Nuovo • Fantacalcio</span>
-                <div class="card-title">⚽ Calcolatore Modificatore Difesa</div>
-                <div class="card-desc">Inserisci il portiere e i difensori: prende in automatico i migliori 3 e calcola subito il bonus.</div>
+                <span class="badge">Indispensabile</span>
+                <div class="card-title">🛡️ Calcolatore Modificatore Difesa</div>
+                <div class="card-desc">Seleziona i voti di portiere e difensori: calcola subito il bonus in automatico.</div>
             </div>
             <div class="card-arrow">→</div>
         </a>
 
-        <a href="https://tool-utili.github.io/mira-conversione/" class="card">
+        <!-- TOOL 2: Ballottaggio / Chi schiero (Punta al nuovo repository "ballottaggio") -->
+        <a href="/ballottaggio/" class="card">
             <div class="card-content">
-                <div class="card-title">🎯 Aim & DPI Converter</div>
-                <div class="card-desc">Converti la sensibilità del mouse e calcola l'eDPI perfetto tra diversi giochi competitivi.</div>
-            </div>
-            <div class="card-arrow">→</div>
-        </a>
-
-        <a href="https://tool-utili.github.io/poker-odds/" class="card">
-            <div class="card-content">
-                <div class="card-title">♠️ Calcolatore Poker & Pot Odds</div>
-                <div class="card-desc">Calcola rapidamente pot odds, equity minima e convenienza matematica del call.</div>
-            </div>
-            <div class="card-arrow">→</div>
-        </a>
-
-        <a href="https://tool-utili.github.io/media-voti/" class="card">
-            <div class="card-content">
-                <div class="card-title">📚 Calcolatore Media Scolastica</div>
-                <div class="card-desc">Scopri la tua media attuale e quale voto ti serve alla prossima interrogazione per recuperare.</div>
+                <span class="badge">Nuovo</span>
+                <div class="card-title">⚖️ Chi Schiero? (Ballottaggio)</div>
+                <div class="card-desc">Confronta due giocatori in base a campo e avversario per risolvere i dubbi di formazione.</div>
             </div>
             <div class="card-arrow">→</div>
         </a>
     </div>
 
     <footer>
-        tool-utili.github.io • Zero fronzoli, solo risultati
+        FantaHub • Zero fronzoli, solo +3
     </footer>
 
 </body>
